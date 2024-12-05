@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useTheme } from "@mui/material/styles";
-import { useMediaQuery, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import BeforeAfterWidget from "../../components/HomePage/BeforeAfterWidget";
 import After from "../../assets/images/Single-After.jpg";
 import Before from "../../assets/images/Single-Before.jpg";
@@ -19,8 +18,8 @@ import thirdVideo from "../../assets/videos/finalVideo.mp4";
 import "./Home.css";
 
 const Home = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [step, setStep] = useState(1); // Controls animation sequence
   const [animationCompleted, setAnimationCompleted] = useState(false); // Ensures animations happen only once
@@ -42,11 +41,11 @@ const Home = () => {
   };
 
   const handleButtonClick = (label) => {
-    if(label == 'Portfolio') {
+    if(label === 'Portfolio') {
       scrollToSection('portfolio-section');
-    } else if(label == 'About') {
+    } else if(label === 'About') {
       scrollToSection('WhyWeAreBest-section');
-    } else if(label == 'Services') {
+    } else if(label === 'Services') {
       scrollToSection('services-main-section');
     } else {
       scrollToSection('contactus-section');

@@ -1,13 +1,9 @@
 import React from "react";
 import "./BackgroundVideo.css"; // Assuming you have a CSS file for your styles
 import backgroundVideo from "../../../assets/videos/finalVideo.mp4";
-import { useTheme } from "@mui/material/styles";
-
-import { useMediaQuery } from "@mui/material";
 
 function BackgroundVideo() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div className="background-container">
       <video

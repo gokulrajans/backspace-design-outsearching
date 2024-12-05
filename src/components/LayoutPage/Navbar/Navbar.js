@@ -14,7 +14,6 @@ import {
   Button,
   useMediaQuery,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import CompanyLogo from "../../../assets/images/CompanyLogo.jpg";
 
 const Navbar = () => {
@@ -25,8 +24,6 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedMenu, setSelectedMenu] = useState(null);
-  const navigate = useNavigate();
 
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
