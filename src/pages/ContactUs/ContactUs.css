@@ -1,0 +1,13 @@
+.contactus-main-bg-img {
+    background-image: url('/src/assets//images/contactus-updated.jpg');
+    /* Ensure the image is in the public folder */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    color: #fff;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
