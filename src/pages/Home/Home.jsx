@@ -13,8 +13,8 @@ import SoftwareDevelopmentBanner from "../../components/HomePage/SoftwareDevelop
 import TrustedBySection from "../../components/HomePage/TrustedBySection";
 import Footer from "../../components/HomePage/Footer/Footer";
 import BackgroundVideo from "../../components/HomePage/BackgroundVideo/BackgroundVideo";
-import firstVideo from "../../assets/videos/Video.mp4";
-import secondVideo from "../../assets/videos/video1.mp4";
+// import firstVideo from "../../assets/videos/Video.mp4";
+// import secondVideo from "../../assets/videos/video1.mp4";
 import thirdVideo from "../../assets/videos/finalVideo.mp4";
 import "./Home.css";
 
@@ -106,7 +106,7 @@ const Home = () => {
       </section>
       <section id="WhyWeAreBest-section">
         <div className="WhyWeAreBest-main-wrapper">
-          <VideoPlayer videos={[secondVideo, firstVideo, thirdVideo]} />
+          <VideoPlayer videos={[thirdVideo]} />
           <StatsSection />
         </div>
       </section>
