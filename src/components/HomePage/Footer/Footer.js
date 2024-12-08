@@ -1,21 +1,13 @@
 import React from "react";
 import "./Footer.css";
-import {
-    Facebook,
-    Twitter,
-    Instagram,
-    LinkedIn,
-    Pinterest,
-    YouTube,
-    Apps,
-    Settings,
-  } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ onButtonClick }) => {
+
   return (
     <footer
       style={{
-        backgroundColor: "#1c1c1c",
+        backgroundColor: "rgba(2, 16, 48)",
         color: "white",
         padding: "20px 10px",
         fontFamily: "Arial, sans-serif",
@@ -33,9 +25,9 @@ const Footer = () => {
       >
         {/* Links Section */}
         <div className="footer-logo-desc">
-          <div className="logo">Design Outsearching</div>
+          <div className="logo">Design Outsourcing</div>
           <p>
-            {`        Design Outsearching Solutions is a leading software development company with a
+            {`        Design Outsourcing Solutions is a leading software development company with a
             professional team specializing in building custom mobile apps,
             websites, and software solutions.`}
           </p>
@@ -53,23 +45,30 @@ const Footer = () => {
         >
           <div
             style={{
-              flex: "1 1 40%",
+              flex: "1 1 25%",
               color: "white",
               fontSize: "14px",
               lineHeight: "1.6",
             }}
           >
             <p>
-              <strong>FOR BUSINESS ENQUIRY</strong>
+              <strong>Company</strong>
             </p>
-            <p>📞 +91-9876543210, +91-9095588998</p>
-            <p>📞 +1-743-708-0511</p>
-            <p>📱 +91-90009 90009</p>
-            <p>✉️ enquiry@designoutsearching.com</p>
+            <p onClick={() => onButtonClick("Portfolio")} style={{cursor: 'pointer'}}>Portfolio</p>
+            <p onClick={() => onButtonClick("About")} style={{cursor: 'pointer'}}>About Us</p>
+            <NavLink to="/services" style={{color: 'white', textDecoration: 'none'}}><p onClick={() => onButtonClick("Services")} style={{cursor: 'pointer'}}>Services</p></NavLink>
+            <NavLink to="/contactus" style={{color: 'white', textDecoration: 'none'}}><p onClick={() => onButtonClick("contactus-section")} style={{cursor: 'pointer'}}>Contact</p></NavLink>
+            <p>
+              <p>
+                Blog && Career <span className="hiring">We are Hiring</span>
+              </p>
+            </p>
+            <p>FAQs</p>
+            {/* <p>Sitemap</p> */}
           </div>
           <div
             style={{
-              flex: "1 1 20%",
+              flex: "1 1 23%",
               color: "white",
               fontSize: "14px",
               lineHeight: "1.6",
@@ -78,45 +77,46 @@ const Footer = () => {
             <p>
               <strong>SERVICES</strong>
             </p>
-            <p>About Us</p>
-            <p>Contact</p>
-            <p>Services</p>
-            <p>
-            <p>Blog && Career <span className="hiring">We are Hiring</span></p>
-            </p>
-            <p>FAQs</p>
-            {/* <p>Sitemap</p> */}
-            </div>
-          
-          <div
+            <p>Photo Editing Service</p>
+            <p>Video Editing Service</p>
+            <p>Virtual Stating Service</p>
+            <p>HDR Service </p>
+            <p>Day To Dusk Service</p>
+          </div>
+          {/* <div
             style={{
-              flex: "1 1 40%",
+              flex: "1 1 22%",
               color: "white",
               fontSize: "14px",
               lineHeight: "1.6",
             }}
           >
             <p>
-              <strong>ADDRESS</strong>
+              <strong>TERMS OF USE</strong>
+            </p>
+            <p>Privacy Policy</p>
+            <p>Terms && Conditions</p>
+          </div> */}
+          <div
+            style={{
+              flex: "1 1 30%",
+              color: "white",
+              fontSize: "14px",
+              lineHeight: "1.6",
+            }}
+          >
+            <p>
+              <strong>FOR BUSINESS ENQUIRY</strong>
+            </p>
+            <p>✉️ editors.support@designoutsources.com</p>
+            <p>📞 +61 485906541</p>
+            <p>
+              <strong>Address</strong>
             </p>
             <p>48, North Terrace, Penong SA-5690</p>
-            <p>Penong SA-5690</p>
             <p>Australia</p>
             <p></p>
             <p></p>
-            <div className="footer-social">
-              <h4>Connect with us</h4>
-              <div className="social-icons-container">
-                <Facebook className="social-icon" />
-                <Twitter className="social-icon" />
-                <Instagram className="social-icon" />
-                <LinkedIn className="social-icon" />
-                <Pinterest className="social-icon" />
-                <Settings className="social-icon" />
-                <YouTube className="social-icon" />
-                <Apps className="social-icon" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -131,8 +131,8 @@ const Footer = () => {
           paddingTop: "10px",
         }}
       >
-        <p>© 2024 Design Outsearching Pvt. Ltd. All Rights Reserved</p>
-        <p>CIN - U74300WB1996PTC000006 | GST - 19AACCP9999P1ZM</p>
+        <p>© 2024 Backspace. All Rights Reserved</p>
+        {/* <p>CIN - U74300WB1996PTC000006 | GST - 19AACCP9999P1ZM</p> */}
         <div
           style={{
             display: "flex",
@@ -141,20 +141,23 @@ const Footer = () => {
             marginTop: "10px",
           }}
         >
-          <a href="#" style={{ color: "white" }}>
+          <a onClick={()=> window.open("https://www.facebook.com/", "_blank")} style={{ color: "white", cursor: 'pointer' }}>
             Facebook
           </a>
-          <a href="#" style={{ color: "white" }}>
+          <a onClick={()=> window.open("https://x.com/", "_blank")} style={{ color: "white", cursor: 'pointer' }}>
             Twitter
           </a>
-          <a href="#" style={{ color: "white" }}>
+          <a onClick={()=> window.open("https://www.linkedin.com/", "_blank")} style={{ color: "white", cursor: 'pointer' }}>
             LinkedIn
           </a>
-          <a href="#" style={{ color: "white" }}>
+          <a onClick={()=> window.open("https://www.instagram.com/", "_blank")} style={{ color: "white", cursor: 'pointer' }}>
+            Instagram
+          </a>
+          <a onClick={()=> window.open("https://www.pinterest.com/", "_blank")} style={{ color: "white", cursor: 'pointer' }}>
             Pinterest
           </a>
-          <a href="#" style={{ color: "white" }}>
-            Instagram
+          <a onClick={()=> window.open("https://www.youtube.com/", "_blank")} style={{ color: "white", cursor: 'pointer' }}>
+            Youtube
           </a>
         </div>
       </div>

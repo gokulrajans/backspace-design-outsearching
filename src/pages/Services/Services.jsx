@@ -1,8 +1,11 @@
 import React from "react";
 import Footer from "../../components/HomePage/Footer/Footer";
+import FinalFooter from "../../components/HomePage/Footer/FinalFooter";
 import GradientText from "../../components/ServicePage/GradientText/GradientText";
 import { Container } from "@mui/material";
+import TrustedBySection from '../../components/HomePage/TrustedBySection';
 import LeftImageService from '../../components/ServicePage/LeftImageService/LeftImageService';
+
 import "./Services.css";
 
 export default function Services() {
@@ -16,7 +19,8 @@ export default function Services() {
           <div><LeftImageService /></div>
         </div>
       </Container>
-      <Footer />
+      <TrustedBySection />
+      <FinalFooter />
     </>
   );
 }

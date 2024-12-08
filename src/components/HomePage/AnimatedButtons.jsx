@@ -12,7 +12,7 @@ const AnimatedButtons = ({ buttonLabels, onButtonClick }) => {
     backgroundColor: "rgb(0, 252, 117)",
     transition: "all 0.3s ease",
     "&:hover": {
-      backgroundColor: "#fc00dd",
+      backgroundColor: "#00fc54e0",// old color #fc00dd
       color: "white",
     },
   });

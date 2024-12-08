@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, TextField, Button, Typography, Box } from "@mui/material";
 import { styled } from "@mui/system";
+import ContactCard from './ContactCard/ContactCard';
 
 const ContactForm = () => {
+  // Form State
+  const [formData, setFormData] = useState({
+    name: "",
+    country: "",
+    contactNumber: "",
+    email: "",
+    requirement: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
   // Styled Components
   const StyledTextField = styled(TextField)({
     marginBottom: "16px",
@@ -12,14 +24,45 @@ const ContactForm = () => {
   });
 
   const StyledButton = styled(Button)({
-    backgroundColor: "#ff007f",
+    backgroundColor: "#1976D2",
+    borderRadius: '12px',
     color: "#fff",
     padding: "12px 24px",
     fontWeight: "bold",
     "&:hover": {
-      backgroundColor: "#e60073",
+      backgroundColor: "#4f19d2",
+    borderRadius: '12px',
     },
   });
+
+  // Validation Rules
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = "Name is required.";
+    if (!formData.country) newErrors.country = "Country is required.";
+    if (!formData.contactNumber) newErrors.contactNumber = "Contact number is required.";
+    if (!formData.email) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(formData.email)) {
+      newErrors.email = "Invalid email format.";
+    }
+    if (!formData.requirement) newErrors.requirement = "Requirement is required.";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Form Submission Handler
+  const handleSubmit = () => {
+    if (validate()) {
+      console.log("Form Data:", formData);
+    }
+  };
+
+  // Input Change Handler
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <Box p={4}>
@@ -35,106 +78,63 @@ const ContactForm = () => {
           <StyledTextField
             fullWidth
             label="Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            error={!!errors.name}
+            helperText={errors.name}
             required
-            InputProps={{
-              startAdornment: (
-                <span role="img" aria-label="user">
-                  👤
-                </span>
-              ),
-            }}
           />
           <StyledTextField
             fullWidth
             label="Country"
+            name="country"
+            value={formData.country}
+            onChange={handleChange}
+            error={!!errors.country}
+            helperText={errors.country}
             required
-            InputProps={{
-              startAdornment: (
-                <span role="img" aria-label="globe">
-                  🌍
-                </span>
-              ),
-            }}
           />
           <StyledTextField
             fullWidth
             label="Contact Number"
-            InputProps={{
-              startAdornment: (
-                <span role="img" aria-label="phone">
-                  📞
-                </span>
-              ),
-            }}
+            name="contactNumber"
+            value={formData.contactNumber}
+            onChange={handleChange}
+            error={!!errors.contactNumber}
+            helperText={errors.contactNumber}
+            required
           />
           <StyledTextField
             fullWidth
             label="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            error={!!errors.email}
+            helperText={errors.email}
             required
-            type="email"
-            InputProps={{
-              startAdornment: (
-                <span role="img" aria-label="email">
-                  📧
-                </span>
-              ),
-            }}
           />
           <StyledTextField
             fullWidth
             label="Requirement"
+            name="requirement"
+            value={formData.requirement}
+            onChange={handleChange}
+            error={!!errors.requirement}
+            helperText={errors.requirement}
             required
             multiline
             rows={4}
-            InputProps={{
-              startAdornment: (
-                <span role="img" aria-label="requirement">
-                  📝
-                </span>
-              ),
-            }}
           />
-          <StyledButton fullWidth>Send Requirement</StyledButton>
+          <StyledButton fullWidth onClick={handleSubmit}>
+            Send Requirement
+          </StyledButton>
         </Grid>
 
         {/* Right Side Contact Info */}
-        <Grid item xs={12} md={6} marginTop={'40px'}>
-          <Box mb={4} display={"flex"} width={'100%'} justifyContent={'center'}>
-            <div justifyContent={'center'}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                India Office
-              </Typography>
-              <Typography variant="body1">
-                Y8, Block - EP, Sector V, Salt Lake
-                <br />
-                Kolkata - 700091, INDIA
-              </Typography>
-              <Typography variant="body1">
-                📞 +91-8420197208 / +91-8420353945
-              </Typography>
-              <Typography variant="body1">
-                📧 enquiry@webguru-india.com
-              </Typography>
-            </div>
-          </Box>
-          <Box mb={4} display={"flex"} width={'100%'} justifyContent={'center'}>
-            <div justifyContent={'center'}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                India Office
-              </Typography>
-              <Typography variant="body1">
-                Y8, Block - EP, Sector V, Salt Lake
-                <br />
-                Kolkata - 700091, INDIA
-              </Typography>
-              <Typography variant="body1">
-                📞 +91-8420197208 / +91-8420353945
-              </Typography>
-              <Typography variant="body1">
-                📧 enquiry@webguru-india.com
-              </Typography>
-            </div>
-          </Box>
+        <Grid item xs={12} md={6} marginTop={"40px"}>
+          <ContactCard />
         </Grid>
       </Grid>
     </Box>

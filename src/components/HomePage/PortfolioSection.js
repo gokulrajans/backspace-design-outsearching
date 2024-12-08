@@ -18,6 +18,7 @@ const PortfolioSection = () => {
         backgroundPosition: "center",
         color: "white",
         textAlign: "center",
+        padding: '2.5rem 8rem 1.5rem 8rem !important',
         py: 6,
         px: 4,
       }}
@@ -62,7 +63,7 @@ const PortfolioSection = () => {
           sx={{ gap: "10px" }}
         >
           <TaskAltIcon />
-          <ListItemText primary="Whether you’re a photographer, business owner, or simply looking to enhance personal photos, we offer a range of solutions tailored to your needs." />
+          <ListItemText sx={{ fontSize: "1.5rem !important", fontWeight: '500' }} disableTypography primary="Whether you’re a photographer, business owner, or simply looking to enhance personal photos, we offer a range of solutions tailored to your needs." />
         </ListItem>
         <ListItem
           disableGutters
@@ -71,7 +72,7 @@ const PortfolioSection = () => {
           sx={{ gap: "10px" }}
         >
           <TaskAltIcon color="black" />
-          <ListItemText primary="Bring your images to life with our premium photo editing services." />
+          <ListItemText sx={{ fontSize: "1.5rem !important", fontWeight: '500' }} disableTypography primary="Bring your images to life with our premium photo editing services." />
         </ListItem>
         <ListItem
           disableGutters
@@ -80,7 +81,7 @@ const PortfolioSection = () => {
           sx={{ gap: "10px" }}
         >
           <TaskAltIcon />
-          <ListItemText primary="Elevate your images with our comprehensive photo editing solutions, designed to bring out the best in every shot. " />
+          <ListItemText sx={{ fontSize: "1.5rem !important", fontWeight: '500' }} disableTypography primary="Elevate your images with our comprehensive photo editing solutions, designed to bring out the best in every shot. " />
         </ListItem>
         <ListItem
           disableGutters
@@ -89,7 +90,7 @@ const PortfolioSection = () => {
           sx={{ gap: "10px" }}
         >
           <TaskAltIcon />
-          <ListItemText primary="Whether for personal use, business, or creative projects, our expert team is dedicated to transforming your photos into masterpieces. " />
+          <ListItemText sx={{ fontSize: "1.5rem !important", fontWeight: '500' }} disableTypography primary="Whether for personal use, business, or creative projects, our expert team is dedicated to transforming your photos into masterpieces. " />
         </ListItem>
       </List>
 
@@ -102,6 +103,7 @@ const PortfolioSection = () => {
               backgroundColor: "#ffd700",
               color: "#000",
               fontWeight: "bold",
+              fontSize: "1rem",
               borderRadius: "50px",
               textTransform: "none",
               padding: "10px 20px",

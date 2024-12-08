@@ -13,7 +13,11 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: auto;
+    height: 90vh;
+  }
+  .why-we-are-section-cls {
+    height: 90vh;
+    width: 100vw;
   }
   
   .secondary-hm-sec {
@@ -146,9 +150,21 @@
     display: flex
   
   }
-  .service-left-wrap,
-  .service-right-wrap {
-    width: 50vw;
+  .service-left-wrap {
+    width: 60vw;
     height: auto;
+  }
+
+  .service-right-wrap {
+    width: 45vw;
+  }
+  .before-after-wid-right {
+    height: 60vh;
+    margin-top: 13vh;
+  }
+
+  .home-footer-sections {
+    height: 90vh;
+    width: 100vw;
   }
   

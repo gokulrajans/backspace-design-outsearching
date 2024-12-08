@@ -12,9 +12,9 @@ const ContactPageGradient = () => {
         <div className="third-txt-wrap-sec gradient-text-sec">
           <span>for Sales?</span>
         </div>
-        <div className="sales-cnt-design">
-            <span>sales@designoutsearching-australia.com</span>
-        </div>
+        {/* <div className="sales-cnt-design">
+            <span>sales@designoutsourcing-australia.com</span>
+        </div> */}
       </div>
     </>
   );

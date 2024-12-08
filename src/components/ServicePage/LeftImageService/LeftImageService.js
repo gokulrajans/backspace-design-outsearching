@@ -1,8 +1,16 @@
 import React from "react";
 import "./LeftImageService.css"; // Import the CSS file for styling
 import BeforeAfterWidget from "../../HomePage/BeforeAfterWidget";
-import Before from "../../../assets/images/Single-Before.jpg";
-import After from "../../../assets/images/Single-After.jpg";
+import SingleBefore from "../../../assets/images/Single-Before.jpg";
+import SingleAfter from "../../../assets/images/Single-After.jpg";
+import DayToDustAfter from "../../../assets/images/Day-to-dusk-After.jpg";
+import DayToDuskBefore from "../../../assets/images/Day-toDusk-BeforeImg.png";
+import HDRAfter from "../../../assets/images/HDR-After.jpg";
+import HDRBefore from "../../../assets/images/Day-toDusk-BeforeImg.png";
+import StagingBefore from "../../../assets/images/staging-before.jpg";
+import StagingAfter from "../../../assets/images/staging-after.jpg";
+import TwinglightBefore from "../../../assets/images/Twinglight-before.jpg";
+import TwinglightAfter from "../../../assets/images/Twinglight-after.jpg";
 
 const LeftImageService = ({
   title = "Transform Your Photos Into Cartoons, Paintings, and More",
@@ -18,13 +26,13 @@ const LeftImageService = ({
           <p>{content}</p>
         </div>
         <div className="image-content">
-          <BeforeAfterWidget beforeImage={After} afterImage={Before} />
+          <BeforeAfterWidget beforeImage={DayToDustAfter} afterImage={DayToDuskBefore} />
         </div>
       </div>
       {/* Second Data */}
       <div className="photo-effects-container">
         <div className="image-content">
-          <BeforeAfterWidget beforeImage={After} afterImage={Before} />
+          <BeforeAfterWidget beforeImage={SingleAfter} afterImage={SingleBefore} />
         </div>
         <div className="text-content">
           <h1>{title}</h1>
@@ -38,13 +46,13 @@ const LeftImageService = ({
           <p>{content}</p>
         </div>
         <div className="image-content">
-          <BeforeAfterWidget beforeImage={After} afterImage={Before} />
+          <BeforeAfterWidget beforeImage={HDRAfter} afterImage={HDRBefore} />
         </div>
       </div>
       {/* Fourth Data */}
       <div className="photo-effects-container">
         <div className="image-content">
-          <BeforeAfterWidget beforeImage={After} afterImage={Before} />
+          <BeforeAfterWidget beforeImage={StagingAfter} afterImage={StagingBefore} />
         </div>
         <div className="text-content">
           <h1>{title}</h1>
@@ -58,7 +66,7 @@ const LeftImageService = ({
           <p>{content}</p>
         </div>
         <div className="image-content">
-          <BeforeAfterWidget beforeImage={After} afterImage={Before} />
+          <BeforeAfterWidget beforeImage={TwinglightAfter} afterImage={TwinglightBefore} />
         </div>
       </div>
     </>

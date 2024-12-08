@@ -1,5 +1,5 @@
 .contactus-main-bg-img {
-    background-image: url('/src/assets//images/contactus-updated.jpg');
+    background-image: url('/src/assets//images/Contact_Us.jpg');
     /* Ensure the image is in the public folder */
     background-size: cover;
     background-position: center;
@@ -10,4 +10,22 @@
     display: flex;
     /* justify-content: center; */
     align-items: center;
+  }
+
+  .contact-us-page-form-wrapper {
+    background-color: #eee;
+    /* height: 100vh; */
+    width: 100vw;
+  }
+  .contact-us-Primary-form-wrapper {
+    /* width: 100%; */
+    height: 100%;
+    padding: 48px;
+  }
+  .contact-us-Secondary-form-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    /* border: 1px solid black; */
+    background-color: #fff;
   }

@@ -21,7 +21,8 @@
   }
   
   .gradient-text-sec {
-    background: linear-gradient(to right, #ff0066, #8a2be2, #0000ff);
+    /* background: linear-gradient(to right, #000, #8a2be2, #0000ff); */
+    background: #fff;
     /* Adjust colors to match the image */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import BeforeAfterWidget from "../../components/HomePage/BeforeAfterWidget";
 import After from "../../assets/images/Single-After.jpg";
 import Before from "../../assets/images/Single-Before.jpg";
-import AnimatedText from "../../components/HomePage/AnimatedText/AnimatedText";
+import { PrimaryAnimatedText, SecondaryAnimatedText} from "../../components/HomePage/AnimatedText/AnimatedText";
 import AnimatedButtons from "../../components/HomePage/AnimatedButtons";
 import PortfolioSection from "../../components/HomePage/PortfolioSection";
 import VideoPlayer from "../../components/HomePage/VideoPlayer";
@@ -11,11 +11,13 @@ import StatsSection from "../../components/HomePage/StartsSection/StartSection";
 import SoftwareDevelopmentBanner from "../../components/HomePage/SoftwareDevelopmentBanner";
 import TrustedBySection from "../../components/HomePage/TrustedBySection";
 import Footer from "../../components/HomePage/Footer/Footer";
+import FinalFooter from "../../components/HomePage/Footer/FinalFooter";
 import BackgroundVideo from "../../components/HomePage/BackgroundVideo/BackgroundVideo";
 // import firstVideo from "../../assets/videos/Video.mp4";
 // import secondVideo from "../../assets/videos/video1.mp4";
 import thirdVideo from "../../assets/videos/finalVideo.mp4";
 import "./Home.css";
+import UpdatedFooter from "../../components/HomePage/Footer/UpdatedFooter";
 
 const Home = () => {
   // const theme = useTheme();
@@ -34,7 +36,7 @@ const Home = () => {
     if (section) {
       const topOffset = section.getBoundingClientRect().top + window.scrollY; // Get section's top position
       window.scrollTo({
-        top: topOffset - 80, // Adjust to move 50px below
+        top: topOffset - 75, // Adjust to move 50px below
         behavior: 'smooth',
       });
     }
@@ -67,8 +69,8 @@ const Home = () => {
           p={4}
         >
           {step >= 1 && (
-            <AnimatedText
-              text="Weelcome to Design Outsearching!!"
+            <PrimaryAnimatedText
+              text="Weelcome to Design Outsourcing!!"
               tag="h1"
               clsNme={"first-cnt-web-mode"}
               onComplete={animationCompleted ? null : handleAnimationComplete}
@@ -76,8 +78,8 @@ const Home = () => {
           )}
 
           {step >= 2 && (
-            <AnimatedText
-              text="Thhe only AI-powered creative companion you’ll ever need to grow your brand. Get it all done with Design Outsearching, ultimate creative suite."
+            <SecondaryAnimatedText
+              text="Thhe only AI-powered creative companion you’ll ever need to grow your brand. Get it all done with Design Outsourcing, ultimate creative suite."
               clsNme={"second-snt-we-mode"}
               tag="h5"
               onComplete={animationCompleted ? null : handleAnimationComplete}
@@ -103,7 +105,7 @@ const Home = () => {
           <PortfolioSection />
         </div>
       </section>
-      <section id="WhyWeAreBest-section">
+      <section className="why-we-are-section-cls" id="WhyWeAreBest-section">
         <div className="WhyWeAreBest-main-wrapper">
           <VideoPlayer videos={[thirdVideo]} />
           <StatsSection />
@@ -115,15 +117,19 @@ const Home = () => {
             <SoftwareDevelopmentBanner />
           </div>
           <div className="service-right-wrap">
+            <div className="before-after-wid-right">
             <BeforeAfterWidget beforeImage={After} afterImage={Before} />
+            </div>
+            
           </div>
         </div>
       </section>
-      <TrustedBySection />
       {/* <BetterDesignSection /> */}
       <section id="contactus-section">
-        <div>
-          <Footer />
+        <div className="home-footer-sections">
+          {/* <Footer /> */}
+          {/* <UpdatedFooter /> */}
+          <FinalFooter onButtonClick={handleButtonClick} />
         </div>
       </section>
     </>

@@ -171,7 +171,7 @@ const Navbar = () => {
               }}
             />
             <Typography variant="h6" className="title-wrap" noWrap>
-              DESIGN OUTSEARCHING
+              DESIGN OUTSOURCING
             </Typography>
           </Box>
           {/* Nav section */}

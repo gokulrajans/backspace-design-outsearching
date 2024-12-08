@@ -5,7 +5,7 @@ const StatsSection = () => {
   return (
     <div className="stats-section">
       <h2 className="margin-zero">
-        Why Choose <span className="highlight">Design OutSearching?</span>
+        Why Choose <span className="highlight">Design OutSourcing?</span>
       </h2>
       <p>
         We are a leading Photo Editing company with over a decade of

@@ -40,9 +40,9 @@ const VideoPlayer = ({ videos }) => {
   return (
     <Box
       sx={{
-        width: '55vw',
-        height: '85vh',
-        // margin: 'auto',
+        width: '45vw',
+        height: '60vh',
+        marginTop: '3rem',
         borderRadius: '16px',
         overflow: 'hidden',
         position: 'relative',

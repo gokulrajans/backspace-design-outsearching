@@ -17,25 +17,25 @@ const SoftwareDevelopmentBanner = () => {
         variant="h3"
         sx={{
           fontWeight: "bold",
-          color: "primary.main",
+          color: "#03abeb",
           fontSize: { xs: "1.8rem", sm: "2.5rem" },
           mb: 2,
         }}
       >
-        #1 <span style={{ color: "red" }}>Australia's leading Photo</span> <br />
+        #1 <span>Australia's leading Photo</span> <br />
         Editing Company
       </Typography>
 
       {/* Description */}
       <Typography
         sx={{
-          fontSize: { xs: "1rem", sm: "1.2rem" },
+          fontSize: { xs: "1rem", sm: "1.1rem" },
           color: "text.secondary",
           mb: 4,
         }}
       >
         Are you looking for a reliable development partner for your digital
-        needs? Design Outsearching is the right partner to share your brilliant
+        needs? Design Outsourcing is the right partner to share your brilliant
         project idea. We listen to, validate, and transform unique business
         ideas into exceptional website images.
         <br />
@@ -55,12 +55,14 @@ const SoftwareDevelopmentBanner = () => {
       <NavLink to="/services">
         <Button
           variant="contained"
-          color="warning"
+          color= "#ffffff"
           sx={{
             padding: "0.8rem 2rem",
             fontSize: "1rem",
             borderRadius: "30px",
             fontWeight: "bold",
+            backgroundColor: "#1976d2",
+            color: "#fff"
           }}
         >
           Discover more about Services
