@@ -141,7 +141,7 @@ const Navbar = () => {
           >
             <Badge color="secondary">
               <NavLink to="/contactus" className="nav-link">
-                CONTACTUS
+                CONTACT US
               </NavLink>
             </Badge>
           </div>
@@ -209,7 +209,7 @@ const Navbar = () => {
               >
                 <Badge color="secondary">
                   <NavLink to="/contactus" className="nav-link">
-                    CONTACTUS
+                    CONTACT US
                   </NavLink>
                 </Badge>
               </div>

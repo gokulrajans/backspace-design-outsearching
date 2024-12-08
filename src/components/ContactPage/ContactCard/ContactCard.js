@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import MessageIcon from "../../../assets/icon/Message-Mail.svg";
+import TelephoneIcon from "../../../assets/icon/Telephone.svg";
+import LocationIcon from "../../../assets/icon/Location.svg";
+import MapIcon from "../../../assets/icon/Map-Location1.svg";
 
 const CardContainer = styled.div`
-  background: #1976D2;
+  background: #1976d2;
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -24,22 +28,31 @@ const CardSubContainer = styled.div`
 `;
 
 const Heading = styled.h1`
-  margin: 0;
+  margin-left: 23px;
   font-size: 2rem;
   font-weight: bold;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   display: flex;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
 `;
 
 const InfoRow = styled.div`
-padding-left: 52px;
+  padding-left: 15px;
   gap: 10px;
   font-size: 1rem;
   align-items: center;
   display: flex;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+`;
+
+const InfoText = styled.span`
+  margin-left: 35px;
+`;
+
+const InfoIcon = styled.span`
+  vertical-align: middle;
+  padding-left: 4px;
 `;
 
 const Icon = styled.span`
@@ -50,7 +63,7 @@ const Link = styled.a`
   color: white;
   text-decoration: underline;
   font-size: 1rem;
-  padding-left: 80px;
+  padding-left: 48px;
 
   &:hover {
     text-decoration: none;
@@ -63,27 +76,43 @@ const ContactCard = () => {
       <CardSubContainer>
         <Heading>Get in Touch</Heading>
         <InfoRow>
-          <Icon>📧</Icon>
-          <span>editors.support@designoutsources.com</span>
+          <img src={MessageIcon} width="40" height="40" />
+
+          <InfoText>
+            <span>editors.support@designoutsources.com</span>{" "}
+          </InfoText>
         </InfoRow>
         <InfoRow>
-          <Icon>📞</Icon>
-          <span>(+61) 485906541</span>
+          <img src={TelephoneIcon} width="40" height="40" />
+          <InfoText>
+            {" "}
+            <span>(+61) 485906541</span>{" "}
+          </InfoText>
         </InfoRow>
         <InfoRow>
-          <Icon>📍</Icon>
-          <span>
-          48, North Terrace, Penong SA-5690, Australia
-          </span>
+          <img src={LocationIcon} width="45" height="45" />
+          <InfoText>
+            <span>48, North Terrace, Penong SA-5690, Australia</span>
+          </InfoText>
+        </InfoRow>{" "}
+        <InfoRow>
+          <Link
+            href="https://www.google.com/maps"
+            target="_blank"
+            rel="noopener noreferrer"
+            PaddingLeft="50px"
+          >
+            <InfoText>
+              <span>Get directions</span>
+            </InfoText>{" "}
+            <InfoIcon>
+              {" "}
+              <span>
+                <img src={MapIcon} width="16" height="16" />
+              </span>
+            </InfoIcon>
+          </Link>{" "}
         </InfoRow>
-        <Link
-          href="https://www.google.com/maps"
-          target="_blank"
-          rel="noopener noreferrer"
-          PaddingLeft="50px"
-        >
-          Get directions →
-        </Link>
       </CardSubContainer>
     </CardContainer>
   );
