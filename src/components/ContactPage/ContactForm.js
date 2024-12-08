@@ -254,7 +254,7 @@ const ContactForm = () => {
     setStatusMessage(null); // Reset status message
     try {
       await emailjs.sendForm(
-        "service_zw61scn",
+        "service_hqsckpr",
         "template_f5u6lss",
         formRef.current,
         "5h1aKMlx3UYX3RH9F"

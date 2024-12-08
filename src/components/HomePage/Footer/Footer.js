@@ -56,8 +56,8 @@ const Footer = ({ onButtonClick }) => {
             </p>
             <p>Portfolio</p>
             <p>About Us</p>
-            <NavLink to="/services" style={{color: 'white', textDecoration: 'none'}}><p onClick={() => onButtonClick("Services")} style={{cursor: 'pointer'}}>Services</p></NavLink>
-            <NavLink to="/contactus" style={{color: 'white', textDecoration: 'none'}}><p onClick={() => onButtonClick("contactus-section")} style={{cursor: 'pointer'}}>Contact</p></NavLink>
+            <p>Services</p>
+            <p>Contact</p>
             <p>
               <p>
                 Blog && Career <span className="hiring">We are Hiring</span>
