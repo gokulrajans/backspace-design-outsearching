@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/backspace-design-outsearching/static/css/main.ad83631c.css",
+    "main.js": "/backspace-design-outsearching/static/js/main.fe7b47fa.js",
+    "static/media/Single-After.jpg": "/backspace-design-outsearching/static/media/Single-After.c790f6e01ffb533d7234.jpg",
+    "static/media/staging-after.jpg": "/backspace-design-outsearching/static/media/staging-after.848492b98fb967264e1b.jpg",
+    "static/media/Single-Before.jpg": "/backspace-design-outsearching/static/media/Single-Before.16cb18006389ac9c7d2b.jpg",
+    "static/media/Twinglight-before.jpg": "/backspace-design-outsearching/static/media/Twinglight-before.665115bfdf17ef42cb77.jpg",
+    "static/media/Twinglight-after.jpg": "/backspace-design-outsearching/static/media/Twinglight-after.54d88c59fedaa54c0d0a.jpg",
+    "static/media/finalVideo.mp4": "/backspace-design-outsearching/static/media/finalVideo.83eafbee0ef4ecbc4850.mp4",
+    "static/media/Day-to-dusk-After.jpg": "/backspace-design-outsearching/static/media/Day-to-dusk-After.4ce3f28c2da100f0bdc2.jpg",
+    "static/media/staging-before.jpg": "/backspace-design-outsearching/static/media/staging-before.3c31b79284c3dee77da4.jpg",
+    "static/media/HDR-After.jpg": "/backspace-design-outsearching/static/media/HDR-After.7884caf894f50e85e499.jpg",
+    "static/media/HDR-Before.jpg": "/backspace-design-outsearching/static/media/HDR-Before.0005476e9d6674cb95dd.jpg",
+    "static/media/Day-toDusk-BeforeImg.png": "/backspace-design-outsearching/static/media/Day-toDusk-BeforeImg.946cccb2f56056c947f4.png",
+    "static/media/CompanyLogo.jpg": "/backspace-design-outsearching/static/media/CompanyLogo.f8b8a2fa0e7045667bfb.jpg",
+    "static/media/PortfolioImage.png": "/backspace-design-outsearching/static/media/PortfolioImage.6669dfbfbfdf09b69396.png",
+    "static/media/Contact_Us.jpg": "/backspace-design-outsearching/static/media/Contact_Us.3e5571e0620551c0ac66.jpg",
+    "static/media/Telephone.svg": "/backspace-design-outsearching/static/media/Telephone.33f5900a6e06d43bd78f2f94f01abe41.svg",
+    "static/media/Location.svg": "/backspace-design-outsearching/static/media/Location.6f0768800fdb78100543e72390731b9d.svg",
+    "index.html": "/backspace-design-outsearching/index.html",
+    "static/media/Message-Mail.svg": "/backspace-design-outsearching/static/media/Message-Mail.0ae9b585d20238ac954d0ec6d135906f.svg",
+    "static/media/Map-Location1.svg": "/backspace-design-outsearching/static/media/Map-Location1.6d05194fc9bd4f010beab9eefd7db23e.svg",
+    "main.ad83631c.css.map": "/backspace-design-outsearching/static/css/main.ad83631c.css.map",
+    "main.fe7b47fa.js.map": "/backspace-design-outsearching/static/js/main.fe7b47fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad83631c.css",
+    "static/js/main.fe7b47fa.js"
+  ]
+}
